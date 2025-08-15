@@ -22,9 +22,34 @@ Partial Class pkp_main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "pkp_main"
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(pkp_main))
+        PictureBox1 = New PictureBox()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(-3, 0)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(1105, 828)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 0
+        PictureBox1.TabStop = False
+        ' 
+        ' pkp_main
+        ' 
+        AutoScaleDimensions = New SizeF(17F, 41F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(1105, 829)
+        Controls.Add(PictureBox1)
+        MaximumSize = New Size(1137, 917)
+        MinimumSize = New Size(1137, 917)
+        Name = "pkp_main"
+        Text = "kp"
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
     End Sub
+
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
