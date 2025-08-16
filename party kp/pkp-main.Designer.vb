@@ -41,7 +41,7 @@ Partial Class pkp_main
         ' 
         ' kp
         ' 
-        kp.Image = My.Resources.Resources.IMG_5250
+        kp.Image = My.Resources.Resources.IMG_52501
         kp.Location = New Point(2, 1)
         kp.Name = "kp"
         kp.Size = New Size(1105, 832)

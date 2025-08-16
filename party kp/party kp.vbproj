@@ -4,10 +4,14 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <RootNamespace>party_kp</RootNamespace>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>party_kp.My.MyApplication</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Untitled.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Import Include="System.Data" />
