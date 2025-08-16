@@ -22,34 +22,50 @@ Partial Class pkp_main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(pkp_main))
-        PictureBox1 = New PictureBox()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        kpMovementInterval = New Timer(components)
+        kpShakeInterval = New Timer(components)
+        kp = New PictureBox()
+        CType(kp, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' PictureBox1
+        ' kpMovementInterval
         ' 
-        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(-3, 0)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(1105, 828)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 0
-        PictureBox1.TabStop = False
+        kpMovementInterval.Enabled = True
+        kpMovementInterval.Interval = 1500
+        ' 
+        ' kpShakeInterval
+        ' 
+        kpShakeInterval.Enabled = True
+        ' 
+        ' kp
+        ' 
+        kp.Image = My.Resources.Resources.IMG_5250
+        kp.Location = New Point(2, 1)
+        kp.Name = "kp"
+        kp.Size = New Size(1105, 832)
+        kp.SizeMode = PictureBoxSizeMode.StretchImage
+        kp.TabIndex = 0
+        kp.TabStop = False
         ' 
         ' pkp_main
         ' 
         AutoScaleDimensions = New SizeF(17F, 41F)
         AutoScaleMode = AutoScaleMode.Font
+        BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1105, 829)
-        Controls.Add(PictureBox1)
-        MaximumSize = New Size(1137, 917)
-        MinimumSize = New Size(1137, 917)
+        Controls.Add(kp)
+        FormBorderStyle = FormBorderStyle.None
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "pkp_main"
+        SizeGripStyle = SizeGripStyle.Hide
         Text = "kp"
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        TopMost = True
+        CType(kp, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
-
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents kpMovementInterval As Timer
+    Friend WithEvents kpShakeInterval As Timer
+    Friend WithEvents kp As PictureBox
 End Class
